@@ -1,0 +1,188 @@
+body { 
+    background-color: #242724;
+    color: #fff;
+    font-family: Calibri;
+}
+
+#container {
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.rectangel {
+    width: 960px;
+    margin: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+#logo {
+    float: left;
+    font-size: 45px;
+    width: 600px;
+    margin: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-family: Arial;
+    text-align: left;
+        
+}
+
+#zegar {
+    float: left;
+    font-size: 45px;
+    margin: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-family: Arial;
+    text-align: left;
+}
+
+.square {
+    width: 50%;
+    float: left;
+}
+
+.tabel1 {
+    margin: 10px;
+    width: 230px;
+    height: 142px;
+    background-color: #2158ee;
+    float: left;
+    text-align: center;
+}
+
+.tabel1:hover {
+    background-color: #1047dd;
+}
+
+.tabel2 {
+    margin: 10px;
+    width: 230px;
+    height: 142px;
+    background-color: #645c5c;
+    float: left;   
+    text-align: center;
+    text-decoration: none;
+}
+
+.tabel2:hover {
+    background-color: #534b4b;
+}
+
+.tabel3 {
+    margin: 10px;
+    width: 230px;
+    height: 142px;
+    background-color: #d41111;
+    float: left;
+    text-align: center;
+}
+
+.tabel3:hover {
+    background-color: #c30000;
+}
+
+.tabel4 {
+    margin: 10px;
+    width: 480px;
+    height: 122px;
+    background-color:  #e2701a;
+    font-size: 30px;
+    text-align: center;
+    padding-top: 20px;
+    line-height: 150%;
+}
+
+.tabel5 {
+    margin: 10px;
+    width: 420px;
+    height: 244px;
+    background-color: #645c5c;
+    float: left;
+    text-align: justify;
+    padding: 30px;
+    
+}
+
+.yt {
+    margin: 10px;
+    width: 105px;
+    height: 142px;
+    background-color:  #d41111;
+    float: left;
+}
+
+.yt:hover {
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+}
+
+.fb {
+    margin: 10px;
+    width: 105px;
+    height: 142px;
+    background-color: #0c0fba;
+    float: left;
+}
+
+.fb:hover {
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+}
+
+.gplus {
+    margin: 10px;
+    width: 105px;
+    height: 142px;
+    background-color: #ee2121;
+    float: left;
+}
+
+.gplus:hover {
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+}
+
+.tw {
+    margin: 10px;
+    width: 105px;
+    height: 142px;
+    background-color: #2158ee;
+    float: left;
+}
+
+.tw:hover {
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+}
+
+a.tabellink {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    width: 230px;
+    height: 142px;
+    
+}
+
+a.tabellinkhtml5 {
+    color: #fff;
+    text-decoration: none;
+}
+
+a.sociallink {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    width: 105px;
+    height: 142px;
+}
+
+.active {
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+    background-color: #716e71;
+}
