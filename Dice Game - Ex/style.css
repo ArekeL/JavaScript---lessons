@@ -18,11 +18,14 @@
 
 .final-score:focus { outline: none;}
 
+#dice-1 { top: 120px;}
+#dice-2 { top: 250px;}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    
+
 }
 
 .clearfix::after {
@@ -77,6 +80,7 @@ body {
     margin-top: 20px;
     margin-bottom: 10px;
     position: relative;
+
 }
 
 .player-score {
@@ -97,7 +101,7 @@ body {
     color: #EB4D4D;
     top: -7px;
     right: 10px;
-    
+
 }
 
 .player-current-box {
