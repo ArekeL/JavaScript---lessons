@@ -51,7 +51,6 @@ var budgetController = (function(){
     },
 
     testing: function() {
-
       console.log(data);
 
     }
@@ -79,15 +78,27 @@ var UIController = (function(){
         value: document.querySelector(DOMstrings.inputValue).value
       };
     },
+    addListItem: function(obj, type) {
+      var html;
+        // Create HTML string which placeholder data
+        if (type === 'inc') {
+            html = '<div class="item clearfix" id="income-%id%"> <div class="item__description">%description%</div> <div class="right clearfix"> <div class="item_ value">%value%</div>  <div class="item__delete"> <button class="item__delete--btn"><i class="ion-ios-close-outline"></i></button> </div> </div> </div>';
+        } else if (type === 'exp') {
+          html = '<div class="item clearfix" id="expense-%id%"> <div class="item__description">%description%</div> <div class="right clearfix"> <div class="item__value">%value%</div> <div class="item__percentage">21%</div> <div class="item__delete"> <button class="item__delete--btn"><i class="ion-ios-close-outline"></i></button> </div> </div> </div>';
+        }
+
+        // Replace the placeholder text wich some actual data
+
+
+}
+        // INSERT THE html into the DOM
+
+
+    },
 
     getDOMstrings: function() {
       return DOMstrings;
-    },
-
-    testing: function() {
-      console.log(data);
     }
-
   };
 
 })();
@@ -118,7 +129,7 @@ var controller = (function(budgetCTRL, UICtrl){
     // 1. Get the field input data
     input = UICtrl.getInput();
 
-    // 2. Add the item to the bidget CONTROLLER
+    // 2. Add the item to the budget CONTROLLER
     newItem = budgetCtrl.addItem(input.type, input.description, input.value);
 
     // 3. Add the item to the UI
