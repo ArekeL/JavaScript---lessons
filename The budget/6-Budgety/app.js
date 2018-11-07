@@ -101,7 +101,7 @@ var UIController = (function(){
         newHtml = newHtml.replace('%value%', obj.value);
 //}
         // INSERT THE html into the DOM
-        document.querySelector(element);
+        document.querySelector(element).insertAdjacentHTML('beforeend', newHtml);
 
     },
 
@@ -142,7 +142,7 @@ var controller = (function(budgetCTRL, UICtrl){
     newItem = budgetCtrl.addItem(input.type, input.description, input.value);
 
     // 3. Add the item to the UI
-
+    UICtrl.addListItem(newItem, input.type);
     // 4. Calculate the budget
 
     // 5. Display the budget on the
