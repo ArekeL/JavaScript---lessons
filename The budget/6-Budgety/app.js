@@ -182,7 +182,7 @@ var UIController = (function(){
     num = Math.abs(num);
     num = num.toFixed(2);
 
-    numSplit = num.split('_');
+    numSplit = num.split('.');
 
     int = numSplit[0];
 
@@ -192,7 +192,7 @@ var UIController = (function(){
     }
     dec = numSplit[1];
 
-        return (type === 'exp' ? sign = '-' : sign = '+') + ' ' + int + dec;
+        return (type === 'exp' ? '-' : '+') + ' ' + int + '.' + dec;
   };
 
   return {
@@ -250,10 +250,12 @@ var UIController = (function(){
     },
 
     displayBudget: function(obj) {
+      var type;
+      obj.budget > 0 ? type = 'inc' : type = 'exp';
 
-      document.querySelector(DOMstrings.budgetLabel).textContent = obj.budget;
-      document.querySelector(DOMstrings.incomeLabel).textContent = obj.totalInc;
-      document.querySelector(DOMstrings.expensesLabel).textContent = obj.totalExp;
+      document.querySelector(DOMstrings.budgetLabel).textContent = formatNumber( obj.budget, type);
+      document.querySelector(DOMstrings.incomeLabel).textContent = formatNumber(obj.totalInc, 'inc');
+      document.querySelector(DOMstrings.expensesLabel).textContent = formatNumber(obj.totalExp, 'exp');
 
       if (obj.percentage > 0) {
         document.querySelector(DOMstrings.percentageLabel).textContent = obj.percentage + '%';
