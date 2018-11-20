@@ -140,7 +140,7 @@ console.log(ages6);
 // Lecture: Arrow functions 2
 
 //ES5
-
+/*
 var box5 = {
   color: 'green',
   position: 1,
@@ -154,12 +154,13 @@ var box5 = {
     });
   }
 };
+*/
 // box5.clickMe();
 
 
 
 //ES6
-
+/*
 const box6 = {
   color: 'green',
   position: 1,
@@ -173,7 +174,7 @@ const box6 = {
   }
 };
 box6.clickMe();
-
+*/
 /*
 const box66 = {
   color: 'green',
@@ -191,9 +192,9 @@ box66.clickMe();
 */
 
 
-function Person(name) {
-  this.name = name;
-}
+//function Person(name) {
+  //this.name = name;
+//}
 
 // ES5
 /*
@@ -213,7 +214,7 @@ new Person('John').myFriends5(friends);
 
 
 // ES 6
-
+/*
 Person.prototype.myFriends6 = function(friends) {
 
   let arr = friends.map((el) => `${this.name} is friends with  ${el}`);
@@ -224,3 +225,42 @@ Person.prototype.myFriends6 = function(friends) {
 
 let friends = ['Bob', 'Jane', 'Mark'];
 new Person('Mike').myFriends6(friends);
+*/
+
+/////////////////////////////////////////////////////
+// Lecture: Destructuring
+
+// ES5
+
+//var john = ['John', 26];
+//var name = john[0];
+//var age = john[1];
+
+// ES6
+
+const [name, age] = ['John', 26];
+console.log(name);
+console.log(age);
+
+const obj ={
+  firstName: 'John',
+  lastName: 'Smith'
+};
+
+const {firstName, lastName} = obj;
+console.log(firstName);
+console.log(lastName);
+
+const {firstName: a, lastName: b} = obj;
+console.log(a);
+console.log(b);
+
+
+
+function calcAgeRetirement(year) {
+  const age2 = new Date().getFullYear() - year;
+  return [age2, 65 - age];
+}
+const [age2, retirement] = calcAgeRetirement(1990);
+console.log(age);
+console.log(retirement);
