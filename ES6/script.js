@@ -451,7 +451,7 @@ var emily = new SmithPerson('Emily', 1983, 'Diaz', 'spanisch');
 
 ///////////////////////////////////////////////////
 // Lecture: Maps
-
+/*
   const question = new Map ();
   question.set('question', 'What is the ofcicial name of the lateste major JavaScript version?');
   question.set(1, 'ES5');
@@ -481,3 +481,44 @@ var emily = new SmithPerson('Emily', 1983, 'Diaz', 'spanisch');
 
   const ans = parseInt(prompt('Write the correct answer'));
   console.log(question.get(ans === question.get('correct')));
+*/
+
+/////////////////////////////////////////////////////////
+// Lecture: Classes
+
+//ES5
+var Person5 = function(name, yearOfBirth, job) {
+  this.name = name;
+  this.yearOfBirth= yearOfBirth;
+  this.job = job;
+};
+
+Person5.prototype.calculateAge =function() {
+  var age = new Date().getFullYear - this.yearOfBirth;
+  console.log(age);
+};
+
+var john5 = new Person5('John', 1990, 'teacher');
+
+//ES6
+
+class Person6 {
+  constructor (name, yearOfBirth, job) {
+    this.name = name;
+    this.yearOfBirth = yearOfBirth;
+    this.job = job;
+  }
+  calculateAge() {
+    var age = new Date().getFullYear - this.yearOfBirth;
+    console.log(age);
+  }
+
+  static greeting() {
+    console.log('Hay there!');
+  }
+
+}
+
+const john6 = new Person6('Johne', 1990, 'teacher');
+
+Person6.greeting();
